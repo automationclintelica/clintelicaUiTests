@@ -1,5 +1,7 @@
 package com.app.clintelica.actions;
 
+import com.app.clintelica.pages.CommonPage;
+import com.app.clintelica.pages.CompanyPage;
 import com.app.clintelica.pages.LoginPage;
 
 import net.thucydides.core.annotations.Step;
@@ -26,5 +28,12 @@ public class AbstractSteps extends ScenarioSteps {
     	return getPages().currentPageAt(LoginPage.class);
     }
 
+    public CompanyPage companyPage() {
+    	return getPages().currentPageAt(CompanyPage.class);
+    }
+
+    public CommonPage commonPage() {
+    	return getPages().currentPageAt(CommonPage.class);
+    }
 
 }
