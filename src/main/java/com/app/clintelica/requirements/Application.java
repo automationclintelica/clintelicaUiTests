@@ -7,4 +7,9 @@ public class Application {
     public class LoginLogout {
         public class Login {}
     }
+    
+    @Feature
+    public class Company {
+    	public class CreateCompany {}
+    }
 }

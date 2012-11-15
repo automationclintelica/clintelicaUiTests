@@ -16,9 +16,9 @@ import com.app.clintelica.actionsgroups.CompanyActionsGroups;
 import com.app.clintelica.actionsgroups.LoginActionsGroups;
 import com.app.clintelica.requirements.Application;
 
-@Story(Application.LoginLogout.Login.class)
+@Story(Application.Company.CreateCompany.class)
 @RunWith(ThucydidesRunner.class)
-public class CompanyTest {
+public class CreateCompanyTest {
 
     @Managed(uniqueSession = true)
     public WebDriver webdriver;
