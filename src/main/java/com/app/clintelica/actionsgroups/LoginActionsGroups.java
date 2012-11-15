@@ -2,12 +2,12 @@ package com.app.clintelica.actionsgroups;
 
 import net.thucydides.core.annotations.Steps;
 
-import com.app.clintelica.actions.LoginSteps;
+import com.app.clintelica.actions.LoginActions;
 
 public class LoginActionsGroups {
 
 	@Steps
-	public LoginSteps loginSteps;
+	public LoginActions loginSteps;
 
 	private void fillLoginRequirements(String username, String password) {
 		loginSteps.fillUsername(username);

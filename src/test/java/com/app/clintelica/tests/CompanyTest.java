@@ -32,7 +32,7 @@ public class CompanyTest {
     @Steps
     public CompanyActionsGroups companyActions;
 
-  
+    
     @Test
     public void addCompanyAndNote() {
     	loginActions.login("automationclintelica@gmail.com", "6EH1n2jVgY");
