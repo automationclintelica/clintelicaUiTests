@@ -27,18 +27,18 @@ public class CompanyTest {
     public Pages pages;
 
     @Steps
-    public LoginActionsGroups loginActions;
+    public LoginActionsGroups loginActionsGroups;
 
     @Steps
-    public CompanyActionsGroups companyActions;
+    public CompanyActionsGroups companyActionsGroups;
 
     
     @Test
     public void addCompanyAndNote() {
-    	loginActions.login("automationclintelica@gmail.com", "6EH1n2jVgY");
+    	loginActionsGroups.login("automationclintelica@gmail.com", "6EH1n2jVgY");
     	Random generator = new Random();
     	int companyNumber = generator.nextInt();
-    	companyActions.addCompany("my new company" + companyNumber);
-    	companyActions.addCompanyNote("my company note");
+    	companyActionsGroups.addCompany("my new company" + companyNumber);
+    	companyActionsGroups.addCompanyNote("my company note");
     }
 } 

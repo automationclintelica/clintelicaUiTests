@@ -2,26 +2,26 @@ package com.app.clintelica.actionsgroups;
 
 import net.thucydides.core.annotations.Steps;
 
-import com.app.clintelica.actions.CommonActions;
+import com.app.clintelica.actions.MenuNavigationActions;
 import com.app.clintelica.actions.CompanyActions;
 
 public class CompanyActionsGroups {
 
 	@Steps
-	public CompanyActions companySteps;
+	public CompanyActions companyActions;
 	
 	@Steps
-	public CommonActions commonSteps;
+	public MenuNavigationActions commonActions;
 
 	public void addCompany(String companyName) {
-		commonSteps.clickAddCompany();
-		companySteps.fillCompanyName(companyName);
-		companySteps.saveChanges();
+		commonActions.clickAddCompanyShortcut();
+		companyActions.fillCompanyName(companyName);
+		companyActions.saveChanges();
 	}
 
 	public void addCompanyNote(String note) {
-		companySteps.addCompanyNote(note);
-		companySteps.saveCompanyChanges();
+		companyActions.addCompanyNote(note);
+		companyActions.saveCompanyChanges();
 	}
 
 }

@@ -14,7 +14,7 @@ public class CommonPage extends AbstractPage  {
 	@FindBy(xpath = "//div[@id='shortcuts']/div[1]")
 	private WebElement companyShortcut;
 
-	public void clickAddCompany() {
+	public void clickAddCompanyShortcut() {
 		element(companyShortcut).waitUntilVisible();
 		element(companyShortcut).click();
 	}
