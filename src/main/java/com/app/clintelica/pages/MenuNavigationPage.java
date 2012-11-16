@@ -40,6 +40,7 @@ public class MenuNavigationPage extends GenericPage  {
 	public void clickAddCompanyShortcut() {
 		element(companyShortcut).waitUntilVisible();
 		element(companyShortcut).click();
+		waitABit(3000);
 	}
 
 	
