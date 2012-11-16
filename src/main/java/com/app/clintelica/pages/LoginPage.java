@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 //@DefaultUrl("http://en.wiktionary.org/wiki/Wiktionary:Main_Page")
-public class LoginPage extends AbstractPage  {
+public class LoginPage extends GenericPage  {
 
 	public LoginPage(WebDriver driver) {
 		super(driver);
@@ -28,8 +28,7 @@ public class LoginPage extends AbstractPage  {
 	@FindBy(id="go-login")
 	private WebElement loginButton;
 	
-//	@FindBy(id = "img[title='Log Out']")
-	@FindBy(xpath = "//div[@id='welcome']/img")
+	@FindBy(css = "div#welcome img")
 	private WebElement logoutButton;
 	
 

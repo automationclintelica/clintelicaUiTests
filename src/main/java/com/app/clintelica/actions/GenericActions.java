@@ -1,6 +1,6 @@
 package com.app.clintelica.actions;
 
-import com.app.clintelica.pages.CommonPage;
+import com.app.clintelica.pages.MenuNavigationPage;
 import com.app.clintelica.pages.CompanyPage;
 import com.app.clintelica.pages.LoginPage;
 
@@ -32,8 +32,8 @@ public class GenericActions extends ScenarioSteps {
     	return getPages().currentPageAt(CompanyPage.class);
     }
 
-    public CommonPage commonPage() {
-    	return getPages().currentPageAt(CommonPage.class);
+    public MenuNavigationPage commonPage() {
+    	return getPages().currentPageAt(MenuNavigationPage.class);
     }
 
 }

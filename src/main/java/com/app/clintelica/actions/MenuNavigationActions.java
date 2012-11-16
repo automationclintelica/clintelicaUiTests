@@ -13,6 +13,16 @@ public class MenuNavigationActions extends GenericActions {
     }
 
 	@Step
+    public void clickCrmMenu() {
+		commonPage().clickCrmMenu() ;
+    }
+	
+	@Step
+    public void clickCompanyInfoSubMenu() {
+		commonPage().clickCompanyInfoSubMenu() ;
+    }
+	
+	@Step
     public void clickAddCompanyShortcut() {
 		commonPage().clickAddCompanyShortcut();
     }

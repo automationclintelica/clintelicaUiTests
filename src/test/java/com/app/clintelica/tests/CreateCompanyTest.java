@@ -8,6 +8,8 @@ import java.util.Random;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.junit.runners.ThucydidesRunner;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -32,13 +34,26 @@ public class CreateCompanyTest {
     @Steps
     public CompanyActionsGroups companyActionsGroups;
 
+    public String companyName;
+    public String companyNote;
+
+    
+    @Before
+    public void before() {
+    	companyName = "NewCompany" + (new Random()).nextInt();
+    	companyNote = "NewNote" + (new Random()).nextInt();
+
+    	loginActionsGroups.login("automationclintelica@gmail.com", "6EH1n2jVgY");
+    }
     
     @Test
     public void addCompanyAndNote() {
-    	loginActionsGroups.login("automationclintelica@gmail.com", "6EH1n2jVgY");
-    	Random generator = new Random();
-    	int companyNumber = generator.nextInt();
-    	companyActionsGroups.addCompany("my new company" + companyNumber);
-    	companyActionsGroups.addCompanyNote("my company note");
+    	companyActionsGroups.addCompany(companyName);
+    	companyActionsGroups.addCompanyNote(companyNote);
+    }
+    
+    @After
+    public void after() {
+    	companyActionsGroups.deleteCompany(companyName);
     }
 } 

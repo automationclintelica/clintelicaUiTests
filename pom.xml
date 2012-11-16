@@ -76,8 +76,10 @@
                 <executions>
                     <execution>
                         <goals>
+                        	<!-- <goal>compile</goal>
                             <goal>integration-test</goal>
                             <goal>verify</goal>
+                            <goal>test</goal> -->
                         </goals>
                     </execution>
                 </executions>
