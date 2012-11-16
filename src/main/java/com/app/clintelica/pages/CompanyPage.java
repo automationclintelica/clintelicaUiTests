@@ -54,7 +54,12 @@ public class CompanyPage extends GenericPage  {
     
     @FindBy(className = "lblPargraf")
     private WebElement firstComment;
+
+    @FindBy(id = "cc_nameSrc")
+    private WebElement companySearchName;
     
+    @FindBy(xpath = "//a[@id='search-companies']//span[.='Search']")
+    private WebElement searchButton;
     
     private void waitCompanyPageToLoad() {
     	element(editCompanyForm).waitUntilVisible();
@@ -117,4 +122,16 @@ public class CompanyPage extends GenericPage  {
 		element(saveCompanyButton).click();
 	}
     
+	public void fillCompanySearchName(String companyName) {
+		element(companySearchName).waitUntilVisible();
+		element(companySearchName).click();
+		element(companySearchName).clear();
+		companySearchName.sendKeys(companyName);
+
+	}
+
+	public void searchCompany() {
+		element(searchButton).waitUntilVisible();
+		element(searchButton).click();
+	}
 }

@@ -31,9 +31,4 @@ public class LoginTest {
     public void loginNormalUser() {
     	loginActions.login("automationclintelica@gmail.com", "6EH1n2jVgY");
     }
-  
-//    @Test
-//    public void addCompanyAndNote() {
-//    	loginActions.login("automationclintelica@gmail.com", "6EH1n2jVgY");
-//}
 } 

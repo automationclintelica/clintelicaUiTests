@@ -11,5 +11,6 @@ public class Application {
     @Feature
     public class Company {
     	public class CreateCompany {}
+    	public class SearchCompany {}
     }
 }

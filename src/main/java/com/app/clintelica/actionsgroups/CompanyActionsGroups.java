@@ -37,4 +37,10 @@ public class CompanyActionsGroups {
 		menuNavigationActions.clickCompanyInfoSubMenu();
 	}
 
+	public void searchCompany(String companyName) {
+		menuNavigationActions.clickCrmMenu();
+		menuNavigationActions.clickCompanyInfoSubMenu();
+		companyActions.fillCompanySearchName(companyName);
+		companyActions.searchCompany();
+	}
 }

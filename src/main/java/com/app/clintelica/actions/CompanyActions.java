@@ -70,4 +70,14 @@ public class CompanyActions extends GenericActions {
 		companyPage().saveCompanyChanges();
     }
 
+	@Step
+    public void fillCompanySearchName(String companyName) {
+		companyPage().fillCompanySearchName(companyName);
+    }
+
+	@Step
+    public void searchCompany() {
+		companyPage().searchCompany();
+    }
+
 }
